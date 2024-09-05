@@ -2,24 +2,11 @@
 // input and echo it back to them. The program will end upon the detection
 // the string "end".
 
-#include <iostream> // NOTE: Organize headers alphabetically
+#include "echo_application.h"
 
-using namespace std;
 int main() {
     // Updated to Best Practice:
-
-    string input;
-    const auto END = "end";
-    const auto SUCCESS = 0;
-
-    // Prompt user for input indefinitely till END keyword is detected:
-    do {
-        cout << "Please enter some text:" << endl;
-        getline(cin, input);
-        cout << "You typed: " << input << endl;
-    } while (input != END);
-
-    return SUCCESS;
+    return EchoApplication::run();
 }
 
 /*
